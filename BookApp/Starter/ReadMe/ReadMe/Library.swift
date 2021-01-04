@@ -1,6 +1,8 @@
+// SwiftUI doesn't allow us a way to store Image data yet, so we use UIKit.
+import class UIKit.UIImage
 
 struct Library {
-  var sortedBooks: [Book] { booksCache }
+  var sortedBooks: [Book] { booksCache } // don't understand this
 
   /// An in-memory cache of the manually-sorted books that are persistently stored.
   private var booksCache: [Book] = [
@@ -16,4 +18,6 @@ struct Library {
     .init(title: "Drawing People", author: "Barbara Bradley"),
     .init(title: "What to Say When You Talk to Yourself", author: "Shad Helmstetter")
   ]
+    
+    var uiImages : [Book: UIImage] = [:]
 }
